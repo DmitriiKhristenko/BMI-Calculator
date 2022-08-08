@@ -1,17 +1,15 @@
 //
-//  ViewController.swift
-//  BMI Calculator
+//  Story.swift
+//  Destiny
 //
-//  Created by Angela Yu on 21/08/2019.
-//  Copyright © 2019 Angela Yu. All rights reserved.
+//  Created by Дмитрий Х on 01.08.22.
 //
 
 import UIKit
 
 class CalculateViewController: UIViewController {
     
-    var bmiValue = "0.0"
-
+    var calculatorBrain = CalculatorBrain()
     
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var heightLabel: UILabel!
@@ -29,26 +27,24 @@ class CalculateViewController: UIViewController {
         
         if sender == heightSlider {
             heightLabel.text = "\(height)m"
-            //print(heightSlider)
         } else if sender == weightSlider {
             weightLabel.text = "\(weight)Kg"
-            //print(weightSlider)
         }
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
         let height = heightSlider.value
         let weight = weightSlider.value
-        let bmi = weight / pow(height, 2)
-        bmiValue = String(format: "%.1f", bmi)
-        self.performSegue(withIdentifier: "goToResult", sender: self)
-        
+        calculatorBrain.caclulateBMI(height: height, weight: weight)
+        performSegue(withIdentifier: "goToResult", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultViewController
-            destinationVC.bmiValue = bmiValue
+            destinationVC.bmiValue = calculatorBrain.getBMIValue()
+            destinationVC.advice = calculatorBrain.getAdvice()
+            destinationVC.color = calculatorBrain.getColor()
         }
     }
     

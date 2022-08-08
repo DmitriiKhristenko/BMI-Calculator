@@ -1,9 +1,8 @@
 //
-//  AppDelegate.swift
-//  BMI Calculator
+//  Story.swift
+//  Destiny
 //
-//  Created by Angela Yu on 21/08/2019.
-//  Copyright © 2019 Angela Yu. All rights reserved.
+//  Created by Дмитрий Х on 01.08.22.
 //
 
 import UIKit

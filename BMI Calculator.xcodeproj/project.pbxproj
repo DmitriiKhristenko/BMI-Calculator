@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -65,7 +65,7 @@
 				AD0B9F79230D61800065EFD9 /* AppDelegate.swift */,
 				AD0B9F7B230D61800065EFD9 /* SceneDelegate.swift */,
 				B5CD30D3289FCC6900DCC625 /* Models */,
-				AD0B9F8E230D63E10065EFD9 /* Views */,
+				AD0B9F8E230D63E10065EFD9 /* View */,
 				AD0B9F8D230D63D70065EFD9 /* Controllers */,
 				AD0B9F82230D61840065EFD9 /* Assets.xcassets */,
 				AD0B9F84230D61840065EFD9 /* LaunchScreen.storyboard */,
@@ -83,12 +83,12 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		AD0B9F8E230D63E10065EFD9 /* Views */ = {
+		AD0B9F8E230D63E10065EFD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				AD0B9F7F230D61800065EFD9 /* Main.storyboard */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		B5CD30D3289FCC6900DCC625 /* Models */ = {
@@ -110,6 +110,7 @@
 				AD0B9F72230D61800065EFD9 /* Sources */,
 				AD0B9F73230D61800065EFD9 /* Frameworks */,
 				AD0B9F74230D61800065EFD9 /* Resources */,
+				B50A1E1A295B14CE00BF1FB6 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -165,6 +166,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B50A1E1A295B14CE00BF1FB6 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD0B9F72230D61800065EFD9 /* Sources */ = {
@@ -253,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -308,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

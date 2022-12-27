@@ -1,6 +1,6 @@
 //
-//  Story.swift
-//  Destiny
+//  BMI.swift
+//  BMI Calculator
 //
 //  Created by Дмитрий Х on 01.08.22.
 //

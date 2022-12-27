@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
-    var calculatorBrain = CalculatorBrain()
+final class ResultViewController: UIViewController {
+    private var calculatorBrain = CalculatorBrain()
     var bmiValue: String?
     var advice: String?
     var color: UIColor?

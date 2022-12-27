@@ -7,8 +7,8 @@
 
 import UIKit
 
-class CalculateViewController: UIViewController {
-    var calculatorBrain = CalculatorBrain()
+final class CalculateViewController: UIViewController {
+    private var calculatorBrain = CalculatorBrain()
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightSlider: UISlider!

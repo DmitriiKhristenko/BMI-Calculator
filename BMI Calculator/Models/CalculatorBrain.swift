@@ -8,7 +8,7 @@
 import UIKit
 
 struct CalculatorBrain {
-    var bmi: BMI?
+    private var bmi: BMI?
     func getBMIValue() -> String {
         let bmiTo1DecimalPlace = String(format: "%.1f", bmi?.value ?? "0.0")
         return bmiTo1DecimalPlace
